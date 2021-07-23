@@ -1,10 +1,9 @@
 from flask import Flask, render_template,request
 import csv
-#import pandas as pd
 
 app=Flask(__name__)
 
-def to_csv(name,_id,email):
+def to_csv(name,_id,email):https://github.com/ratanojha10/LearningFlask/blob/main/main_code.py
 	l=[name, _id, email]
 	with open('data.csv', 'a') as file:
 		p = csv.writer(file)
