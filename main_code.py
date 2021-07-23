@@ -3,7 +3,7 @@ import csv
 
 app=Flask(__name__)
 
-def to_csv(name,_id,email):https://github.com/ratanojha10/LearningFlask/blob/main/main_code.py
+def to_csv(name,_id,email):
 	l=[name, _id, email]
 	with open('data.csv', 'a') as file:
 		p = csv.writer(file)
