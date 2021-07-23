@@ -16,8 +16,11 @@ def _form():
 		name = request.form['name']
 		_id = request.form['id']
 		email = request.form['email']
-		to_csv(name,_id,email)
-		return "Thanks"
+		if (name=='' or _id=='' or email==''):
+			return "Retry"
+		else:
+			to_csv(name,_id,email)
+			return "Thanks"
 	elif request.method == 'GET':
 		return render_template('form.html')
 if __name__=="__main__":
